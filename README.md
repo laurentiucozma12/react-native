@@ -13,6 +13,16 @@ npx create-expo-app@latest
 npx expo start
 ```
 
+4. I created react-global.d.ts so I dont have to import manually react every time in every file:
+
+```tsx
+import * as React from 'react';
+
+declare global {
+  const React: typeof React;
+}
+```
+
 ## Default Readme:
 
 ## Welcome to your Expo app 👋
