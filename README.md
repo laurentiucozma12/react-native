@@ -1,4 +1,71 @@
-# Welcome to your Expo app 👋
+# What I did:
+
+1. I read from https://docs.expo.dev/tutorial/create-your-first-app/
+2. I installed react native expo:
+
+```
+npx create-expo-app@latest
+```
+
+3. I started the project:
+
+```
+npx expo start
+```
+
+4. I added Tailwind from this guide: https://www.freecodecamp.org/news/tailwindcss-in-react-native-expo/
+
+```
+npm i nativewind
+npm i --dev tailwindcss@3.3.2
+```
+
+5. I added Tailwind config file with this command:
+
+```
+npx tailwindcss init
+```
+
+6. I configured the Tailwind config file
+
+```tsx
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './App.{js,jsx,ts,tsx}',
+    './<custom directory>/**/*.{js,jsx,ts,tsx}',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+7. I configured NativeWind with Babel babel.conf.js:
+
+```tsx
+module.exports = function (api) {
+  api.cache(true);
+  return {
+    presets: ['babel-preset-expo'],
+    plugins: ['nativewind/babel'], // I added this line
+  };
+};
+```
+
+8. I changed configuration in expo-end.d.ts:
+
+```ts
+/// <reference types="nativewind/types" />
+//  <reference types="expo/types" /> // This was the old code, I removed this line
+
+// NOTE: This file should not be edited and should be in your git ignore
+```
+
+## Default Readme:
+
+## Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
