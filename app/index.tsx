@@ -1,3 +1,4 @@
+// index.tsx
 import App from '@/components/App';
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
