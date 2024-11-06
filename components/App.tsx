@@ -68,6 +68,7 @@ const App: React.FC = () => {
               placeholder="Write a task"
               value={task || ''}
               onChangeText={(text) => setTask(text)}
+              autoFocus={modalVisible}
             />
             <TouchableOpacity onPress={handleAddTask} style={styles.saveButton}>
               <Text style={styles.saveButtonText}>Save Task</Text>
