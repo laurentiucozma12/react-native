@@ -183,6 +183,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 20,
     marginTop: 10,
+    marginBottom: 15,
   },
   saveButtonText: {
     color: '#FFF',
@@ -190,6 +191,11 @@ const styles = StyleSheet.create({
   },
   cancelButton: {
     marginTop: 10,
+    borderWidth: 1,
+    borderColor: '#55BCF6',
+    borderRadius: 5,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
   },
   cancelButtonText: {
     color: '#55BCF6',
